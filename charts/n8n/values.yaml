@@ -33,12 +33,12 @@ imagePullSecrets: []
 # Ingress
 #
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
   # define a custom ingress class Name, like "traefik" or "nginx"
   className: ""
   hosts:
-    - host: workflow.example.com
+    - host: n8n.d457.dev.forge.minint.fr
       paths: []
   tls:
     - hosts:
@@ -80,7 +80,7 @@ main:
   #
   persistence:
     # If true, use a Persistent Volume Claim, If false, use emptyDir
-    enabled: false
+    enabled: true
     # what type volume, possible options are [existing, emptyDir, dynamic] dynamic for Dynamic Volume Provisioning, existing for using an existing Claim
     type: emptyDir
     # Persistent Volume Storage Class
@@ -104,7 +104,7 @@ main:
     accessModes:
       - ReadWriteOnce
     # Persistent Volume size
-    size: 1Gi
+    size: 10Gi
     # Use an existing PVC
     # existingClaim:
 
